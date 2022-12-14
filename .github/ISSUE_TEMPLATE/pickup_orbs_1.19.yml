@@ -1,10 +1,9 @@
 name: 1.19 Issue Report
 description: Report an issue for the mod's 1.19 version
-body:        
+body:
   - type: markdown
     attributes:
-      value: "## Versions"
-  
+      value: '## Versions'
   - type: input
     id: minecraft-version
     attributes:
@@ -16,81 +15,75 @@ body:
     id: forge-version
     attributes:
       label: Forge Version
-      placeholder: "Ex: 43.2.0"
+      placeholder: 'Ex: 43.2.0'
     validations:
       required: true
   - type: input
     id: pickuporbs-version
     attributes:
-      label: "Pickable Health Orbs Version"
-      description: "'Latest' is not a valid answer, write an exact version number"
+      label: Pickable Health Orbs Version
+      description: '''Latest'' is not a valid answer, write an exact version number'
     validations:
       required: true
-  
- 
   - type: markdown
     attributes:
-      value: "## Issue Description"
-
+      value: '## Issue Description'
   - type: textarea
     id: description
     attributes:
       label: Describe your issue
     validations:
       required: true
-  
-    - type: input
+  - type: input
     id: log-file
     attributes:
       label: Log File related to your crash
       description: Paste a link to the log file
     validations:
       required: true
-  
   - type: input
     id: crash-report
     attributes:
       label: Crash Report
-      description: Paste a link to the crash report, if present
+      description: 'Paste a link to the crash report, if present'
     validations:
       required: false
-      
   - type: textarea
     id: other-mods
     attributes:
       label: Other mods
-      description: List the smallest set of mods you have used to reproduce this issue. Please do not list a modpack name unless the modpack is public
+      description: >-
+        List the smallest set of mods you have used to reproduce this issue.
+        Please do not list a modpack name unless the modpack is public
     validations:
       required: true
-        
-        
   - type: markdown
     attributes:
-      value: "## Confirm the following"
-      
+      value: '## Confirm the following'
   - type: dropdown
     id: just-pickuporbs
     attributes:
-      label: "Tried reproducing with just Pickable Health Orbs?"
-      description: "Test by removing all other mods besides Pickable Health Orbs"
+      label: Tried reproducing with just Pickable Health Orbs?
+      description: Test by removing all other mods besides Pickable Health Orbs
       options:
         - 'Yes'
-        - 'I will go do that now'
+        - I will go do that now
         - 'No'
     validations:
       required: true
-      
   - type: dropdown
     id: performance-enhancers
     attributes:
-      label: "Performance Enchancers"
-      description: "Select all that you were using when you reproduced the issue. Ideally reproduce with fewer performance enhancers."
+      label: Performance Enchancers
+      description: >-
+        Select all that you were using when you reproduced the issue. Ideally
+        reproduce with fewer performance enhancers.
       multiple: true
       options:
-        - 'Rubidium'
-        - 'Optifine'
-        - 'Magnesium'
-        - 'Other (specify under other mods)'
-        - 'None of the above'
+        - Rubidium
+        - Optifine
+        - Magnesium
+        - Other (specify under other mods)
+        - None of the above
     validations:
       required: true
